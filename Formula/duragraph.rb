@@ -5,13 +5,13 @@
 class Duragraph < Formula
   desc "Temporal for AI agents — durable, replayable agent workflows on your infra. Self-hosted, event-sourced, single binary."
   homepage "https://github.com/Duragraph/duragraph"
-  version "0.7.7"
+  version "0.8.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Duragraph/duragraph/releases/download/v0.7.7/duragraph_0.7.7_darwin_x86_64.tar.gz"
-      sha256 "a1f95b10d2985ccc67fd855147b456ec4989aaf8148ac1c82b421a278f4278fd"
+      url "https://github.com/Duragraph/duragraph/releases/download/v0.8.0/duragraph_0.8.0_darwin_x86_64.tar.gz"
+      sha256 "a76277fb07d7e4ee5c3c33d22bdf8872d69699203fcc65b3a2c6db806db4131a"
 
       define_method(:install) do
         bin.install "duragraph"
@@ -19,8 +19,8 @@ class Duragraph < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Duragraph/duragraph/releases/download/v0.7.7/duragraph_0.7.7_darwin_arm64.tar.gz"
-      sha256 "741100f1f2da39afb83d2c9a2cbf47319b3075f7aad8f25ca66cf04566c54efa"
+      url "https://github.com/Duragraph/duragraph/releases/download/v0.8.0/duragraph_0.8.0_darwin_arm64.tar.gz"
+      sha256 "9755b346fc47e9856884b63e39f4b098dbb230aae5b5b376c5211a29ea2f7d43"
 
       define_method(:install) do
         bin.install "duragraph"
@@ -31,16 +31,16 @@ class Duragraph < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Duragraph/duragraph/releases/download/v0.7.7/duragraph_0.7.7_linux_x86_64.tar.gz"
-      sha256 "9f5609884d22387c2cd48c97fd2904930a35d53e55c640cab7a486f5ad2e2c17"
+      url "https://github.com/Duragraph/duragraph/releases/download/v0.8.0/duragraph_0.8.0_linux_x86_64.tar.gz"
+      sha256 "ab38dd064d897fdf3be7bc2667be854654501b52537483d276026644023dfc8b"
       define_method(:install) do
         bin.install "duragraph"
         generate_completions_from_executable(bin/"duragraph", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Duragraph/duragraph/releases/download/v0.7.7/duragraph_0.7.7_linux_arm64.tar.gz"
-      sha256 "0731a9a6d6f0168a555f178c135d572592ad865939c8930d1e67ee8b26fc3a6a"
+      url "https://github.com/Duragraph/duragraph/releases/download/v0.8.0/duragraph_0.8.0_linux_arm64.tar.gz"
+      sha256 "8700fa0784f9eada91dd6e35021fde86ed2fa0d7d0ecffb5df1f0c076f66cc7c"
       define_method(:install) do
         bin.install "duragraph"
         generate_completions_from_executable(bin/"duragraph", "completion")
